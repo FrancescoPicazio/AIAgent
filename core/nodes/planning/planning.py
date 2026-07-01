@@ -30,8 +30,6 @@ def _fallback_plan(user_text: str) -> Plan:
         step("list_available_tools", {}, "Mostrare i tool disponibili.")
     elif any(k in low for k in ["wallet", "portafoglio", "saldo", "bilancio"]):
         step("wallet", {}, "Recuperare andamento/saldo del portafoglio.")
-    elif any(k in low for k in ["trading", "trade", "mercato", "mercati", "borsa"]):
-        step("trading", {}, "Usare il workflow trading dedicato.")
     elif any(k in low for k in ["ora", "ore", "giorno", "data", "oggi"]):
         step("get_current_datetime", {}, "Recuperare data e ora correnti.")
     elif any(k in low for k in ["calcola", "quanto fa"]):
@@ -132,8 +130,6 @@ Tool catalog con schema reale:
 Memoria/RAG:
 {state.get("memory", "")}
 
-Contesto trading:
-{agent_instance.trading_context}
 
 Richiesta utente:
 {user_text}
@@ -149,8 +145,6 @@ Regole rigide:
 - Usa solo nomi tool presenti nel catalogo.
 - Gli args devono rispettare lo schema del tool.
 - Step indipendenti devono avere depends_on=[] per consentire parallelismo.
-- Se l'utente chiede di eseguire trading o gestire operazioni, usa il tool trading.
-- Se l'utente chiede l'andamento, le statistiche o il saldo del wallet/portafoglio, usa il tool wallet.
 - Se l'utente chiede dati in file o knowledge base, usa search_docs.
 - Se chiede lista tool, usa list_available_tools.
 - Non inventare output dei tool.

@@ -14,6 +14,4 @@ def list_available_tools() -> str:
         "- speak_text(text, play): sintesi vocale in italiano.\n"
         "- transcribe_audio_file(audio_path): trascrizione audio da file.\n"
         "- listen_from_microphone(duration_seconds): ascolto microfono.\n"
-        "- trading(): workflow e pianificazione trading.\n"
-        "- wallet(): andamento e simulazione del portafoglio.\n"
     )

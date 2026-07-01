@@ -7,8 +7,6 @@ from core.nodes.reasoning.declination import ReasoningDecision
 def _heuristic_decision( user_text: str) -> ReasoningDecision:
     low = user_text.lower()
     keywords = [
-        "trading", "trade", "mercato", "mercati", "borsa",
-        "wallet", "portafoglio", "saldo", "bilancio",
         "tool", "strument",
         "ora",
         "ore",
@@ -50,7 +48,7 @@ def reasoner_node(agent_instance: "Any", state: AgentState) -> Dict[str, Any]:
     {user_text}
 
     Regole:
-    - Se la richiesta riguarda trading, file, knowledge base, memoria, data/ora,
+    - Se la richiesta riguarda file, knowledge base, memoria, data/ora,
       calcoli, voce/audio o lista tool, requires_tools=true.
     - Se e solo small talk o risposta generale, requires_tools=false.
     - Rispondi con uno schema strutturato compatibile con ReasoningDecision.

@@ -5,7 +5,6 @@ from tools.categories.general.calculator import calculator
 from tools.categories.general.introspection import list_available_tools
 from tools.categories.general.text_to_speech import speak_text
 from tools.categories.general.speech_to_text import transcribe_audio_file, listen_from_microphone
-from tools.categories.trading.trading import trading, wallet
 
 
 class ToolRegistry:

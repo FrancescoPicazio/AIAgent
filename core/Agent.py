@@ -76,7 +76,6 @@ class AgentInstance:
 
         self.role = _load_md("knowledge/IO/role.md")
         self.personality = _load_md("knowledge/IO/personality.md")
-        self.trading_context = _load_md("knowledge/IO/trading.md")
 
         self.long_memory = LongTermMemory()
         self.checkpointer = MemorySaver()

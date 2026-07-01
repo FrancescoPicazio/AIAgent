@@ -74,8 +74,7 @@ Critica/validazione:
 <<<END_DATA>>>
 
 Se NON ci sono risultati di tool (risultati tool osservati e vuoti/assenti) e la richiesta
-dell'utente implica chiaramente l'uso di un tool (es. dati su wallet, saldo, trading,
-operazioni), NON DEVI INVENTARE dati, numeri, saldi o transazioni. Devi dire chiaramente
+dell'utente implica chiaramente l'uso di un tool, NON DEVI INVENTARE dati, numeri, saldi o transazioni. Devi dire chiaramente
 che non hai eseguito nessuna azione concreta e spiegare che serve riformulare la richiesta
 o che il sistema non ha attivato lo strumento corretto. Non presentare MAI un'invenzione
 come se fosse un output reale di un tool.
