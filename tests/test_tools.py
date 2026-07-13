@@ -107,13 +107,13 @@ class TestGitTools:
 
     def test_git_tools_creation(self):
         """Test creazione git tools."""
-        tools = GitTools(".")
+        tools = GitTools("..")
         assert tools is not None
         assert tools.repo_path == "."
 
     def test_git_status(self):
         """Test git status."""
-        tools = GitTools(".")
+        tools = GitTools("..")
         result = tools.status()
         
         # Deve tornare status o errore (se non git repo)
@@ -135,7 +135,7 @@ class TestToolsFactory:
 
     def test_create_git(self):
         """Test create git."""
-        tools = ToolsFactory.create_git(".")
+        tools = ToolsFactory.create_git("..")
         assert isinstance(tools, GitTools)
 
     def test_create_all_tools(self):

@@ -21,13 +21,13 @@ class TestCodeScanner:
 
     def test_scanner_init(self):
         """Test inizializzazione scanner."""
-        scanner = CodeScanner(".")
-        assert scanner.root_path == Path(".")
+        scanner = CodeScanner("..")
+        assert scanner.root_path == Path("..")
         assert len(scanner.SUPPORTED_LANGUAGES) > 0
 
     def test_scanner_scan(self):
         """Test scansione repository."""
-        scanner = CodeScanner(".")
+        scanner = CodeScanner("..")
         results = scanner.scan()
         
         assert "languages" in results
@@ -37,7 +37,7 @@ class TestCodeScanner:
 
     def test_language_detection(self):
         """Test riconoscimento linguaggi."""
-        scanner = CodeScanner(".")
+        scanner = CodeScanner("..")
         ext_to_lang = scanner.SUPPORTED_LANGUAGES
         
         assert ".py" in ext_to_lang
@@ -224,7 +224,7 @@ class TestCodeIntelligenceLayer:
 
     def test_init(self, tmp_path):
         """Test inizializzazione layer."""
-        layer = CodeIntelligenceLayer(str(tmp_path), ".ai")
+        layer = CodeIntelligenceLayer(str(tmp_path), "../.ai")
         
         assert layer.project_root == tmp_path
         assert (layer.ai_path / "knowledge").exists()
@@ -232,7 +232,7 @@ class TestCodeIntelligenceLayer:
 
     def test_initialize(self, tmp_path):
         """Test inizializzazione completa."""
-        layer = CodeIntelligenceLayer(str(tmp_path), ".ai")
+        layer = CodeIntelligenceLayer(str(tmp_path), "../.ai")
         results = layer.initialize()
         
         assert "languages" in results

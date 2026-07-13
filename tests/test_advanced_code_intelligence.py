@@ -16,7 +16,7 @@ class TestCodeNode:
             node_id="test::func::main",
             name="main",
             node_type=CodeNodeType.FUNCTION,
-            file_path="main.py",
+            file_path="../main.py",
             line_start=1,
             line_end=10,
             content="def main(): pass"
