@@ -1,0 +1,81 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Linting
+.flake8
+.pylint
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Project-specific: .ai folder temporaries
+.ai/vector/               # Vector DB (regenerable)
+.ai/logs/                 # Audit logs (regenerable)
+.ai/cache/                # Cache files
+.ai/memory/short_term.md  # Temporary task memory
+.ai/tasks/active/         # Active task working files (not final)
+
+# Knowledge/Bookshelf (only ignore cache)
+knowledge/.cache/
+
+# Keep in git
+# .ai/project.md
+# .ai/architecture.md
+# .ai/rules.md
+# .ai/glossary.md
+# .ai/state.json
+# .ai/decisions/
+# .ai/tasks/completed/
+# .ai/memory/context.md
+# .ai/prompts/
+
+# OS
+Thumbs.db
+.DS_Store
+
